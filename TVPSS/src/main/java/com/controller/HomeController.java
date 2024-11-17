@@ -8,28 +8,19 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 
 public class HomeController {
-	@RequestMapping("/homie")
+	
+	@RequestMapping("/crew-resource")
 	@ResponseBody()
-	public String hometown() {
-		return "this is homie";
+	public ModelAndView crewResource() {
+		ModelAndView modelAndView = new ModelAndView("crewResourcePage");
+		return modelAndView;
 	}
 	
-	@RequestMapping("/signup")
+	@RequestMapping("/video-validation")
 	@ResponseBody()
-	public String signup() {
-		return "this is signup";
-	}
-	
-	@RequestMapping("/admin")
-	@ResponseBody()
-	public String admin() {
-		return "this is admin module";
-	}
-	
-	@RequestMapping("/about")
-	@ResponseBody()
-	public String aboutUs() {
-		return "this is About Us page";
+	public ModelAndView validateVideo() {
+		ModelAndView modelAndView = new ModelAndView("validateVideo");
+		return modelAndView;
 	}
 	
 	@GetMapping("/") 
