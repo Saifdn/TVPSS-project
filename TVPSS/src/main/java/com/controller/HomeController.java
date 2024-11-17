@@ -32,9 +32,9 @@ public class HomeController {
 		return "this is About Us page";
 	}
 	
-	@GetMapping("/")
+	@GetMapping("/") 
 	public ModelAndView home() {
-		ModelAndView modelAndView = new ModelAndView("loginPage");
+		ModelAndView modelAndView = new ModelAndView("validateVideo");
 		modelAndView.addObject("message", "Welcome to the TVPSS app!");
 		return modelAndView;
 	}
